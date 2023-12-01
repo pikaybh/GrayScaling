@@ -1,0 +1,68 @@
+Python 3.6.13 |Anaconda, Inc.| (default, Mar 16 2021, 11:37:27) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import opencv as cv
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'opencv'
+>>> import cv2 as cv
+>>> import matplotlib.pyplot as plt
+>>> BGR = cv.imread("unnamed.png")
+>>> RGB = cv.cvtColor(BGR, cv.COLOR_RGB2RGB)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'cv2' has no attribute 'COLOR_RGB2RGB'
+>>> RGB = cv.cvtColor(BGR, cv.COLOR_BGR2RGB)
+>>> bw = cv.cvtColor(BGR, cv.COLOR_BGR2GRAY)
+>>> plt.subplot(1, 2, 1)
+<AxesSubplot:>
+>>> plt.imshow(RGB)
+<matplotlib.image.AxesImage object at 0x0000022CC0225EF0>
+>>> plt.xticks([]) # x축 좌표 숨김
+([], [])
+>>>
+>>> plt.yticks([]) # y축 좌표 숨김
+([], [])
+>>> plt.subplot(1, 2, 2) # 1행 2열에서 2번째 열
+<AxesSubplot:>
+>>> plt.imshot(bw, cmap='gray')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'matplotlib.pyplot' has no attribute 'imshot'
+>>> plt.imshow(bw, cmap='gray')
+<matplotlib.image.AxesImage object at 0x0000022CFC367518>
+>>> plt.xticks([]) # x축 좌표 숨김
+([], [])
+>>>
+>>> plt.yticks([]) # y축 좌표 숨김
+([], [])
+>>>
+>>>
+>>>
+>>> plt.show()
+>>> plt.show()
+>>> plt.show()
+>>>  plt.xticks([]) # x축 좌표 숨김
+  File "<stdin>", line 1
+    plt.xticks([]) # x축 좌표 숨김
+    ^
+IndentationError: unexpected indent
+>>> plt.xticks([]) # x축 좌표 숨김
+([], [])
+>>> plt.xticks([]) # x축 좌표 숨김
+([], [])
+>>> plt.imshow(RGB)
+<matplotlib.image.AxesImage object at 0x0000022CFCF9E588>
+>>> plt.subplot(1, 2, 2) # 1행 2열에서 2번째 열
+<AxesSubplot:>
+>>> plt.imshot(bw, cmap='gray')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'matplotlib.pyplot' has no attribute 'imshot'
+>>> plt.imshow(bw, cmap='gray')
+<matplotlib.image.AxesImage object at 0x0000022C8A6C1DA0>
+>>> plt.xticks([]) # x축 좌표 숨김
+([], [])
+>>> plt.yticks([]) # y축 좌표 숨김
+([], [])
+>>> plt.show()
+>>> exit()
